@@ -33,7 +33,7 @@ import org.apache.qpid.jms.JmsConnectionFactory;
 public class MirrorSite2Consumer {
 
     public static void main(final String[] args) throws Exception {
-        ConnectionFactory cfServer1 = new JmsConnectionFactory("amqp://192.168.2.11:61617");
+        ConnectionFactory cfServer1 = new JmsConnectionFactory("amqp://192.168.2.13:5772");
 
         // Every message send on server0, will be mirrored into server1
         try (Connection connection = cfServer1.createConnection()) {
